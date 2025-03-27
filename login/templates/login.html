@@ -1,0 +1,28 @@
+{% extends 'siglo.html' %}
+
+{% block content %}
+  
+{% csrf_token %}
+<section class="siglo">
+    <div class="loginform l">
+
+<label class="slhead">Sign-in</label>  
+
+<form action="" class="slform" method="post">
+    {% csrf_token %}
+    {% if msg %}
+        <label class="slmsg">{{msg}}</label>
+    {% endif %} 
+    <!-- <label for="">Username</label><br> -->
+    <input required type="text" placeholder="User-Name" name="un">
+    
+    <!-- <label for="">Password</label><br> -->
+    <input required type="password" placeholder="Password" name="pw">
+    
+    <input type="submit" value="LOGIN"> 
+    <label class="slred">Create a Account? <a href="{% url 'signup' %}">Sign-Up</a></label>
+    <!-- <button><a href="{% url 'signup' %}">SIGNUP</a></button> -->
+</form>
+</div>
+</section> 
+{% endblock %}

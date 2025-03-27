@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+
+{%block content%}
+
+{% csrf_token %}
+<section class="tconverter">
+<form action="" method="post" class="rn">
+    <label class="title">Binary to Number</label>
+    <input type="text" placeholder="Enter binary value" value="{{ indata }}" name="data">
+    <label class="p">Given Input: {{ indata }}</label>
+    {% if msg %} 
+    <label class="p">Output: <label style="color: lightcoral;">{{ msg }}</label></label> 
+    {% else %} 
+    <label class="p">Output: {{ d }}</label>
+    {% endif %}
+    <div class="tresub">
+        <button type="submit">Submit</button>
+        <button><a href="{% url 'tools' %}">Return</a></button>
+    </div>
+</form>
+</section>
+{%endblock content%}

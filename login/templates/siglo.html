@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Doto:wght@100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Indie+Flower&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Moon+Dance&family=Noto+Sans+Mongolian&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/siglo.css' %}">
+    <script src="https://kit.fontawesome.com/02064b451d.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body> 
+    <!-- {% include 'nav.html' %} -->
+    {% include 'nav.html' %} 
+  
+    {% block content %} 
+ 
+    {% endblock %} 
+</body>
+</html>

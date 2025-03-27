@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+
+{%block content%}
+
+{% csrf_token %}
+<section class="tconverter">
+<form action="" method="post" class="rn">
+    <label class="title">Character to ASCII value</label>
+    <input type="text" placeholder="Enter single char" value="{{ indata }}" name="data">
+    <label class="p">Given Input: {{ indata }}</label>
+    <label class="p">Output: {{ d }}</label>
+    <div class="tresub">
+        <button type="submit">Submit</button>
+        <button><a href="{% url 'tools' %}">Return</a></button>
+    </div>
+</form>
+</form>
+</section>
+{%endblock content%}

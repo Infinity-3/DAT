@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+
+{% block content %} 
+
+    <label class="nhead">Notes</label>
+    <!-- {% comment %}{% if user.is_authenticated %} 
+    {% if user.is_authenticated %} -->
+    <!-- {% if msg %}  
+    <label class="p"> Please  <a href="{% url 'login' %}"> Login </a>  to Create a Note </label>  
+    {% else %} {% endcomment %}-->
+    
+    {% if count is None %}
+    <p class="usnot">Hi {{ user.get_username}}. You are one step ahead to create your notes.</p> 
+    {% else %}
+    <p class="usnot"> Hi {{ user.get_username}}. Welcome to your Notes, you have created {{ count }} notes.</p>
+    {% endif %}
+    <div class="notecont">
+        {% if count is None %} 
+            <a href="{% url 'createnotes' %}">
+                <div class="note s">
+                    <label class="notet">Create a Notes</label> 
+                    <label class="noted">Describe your notes</label>
+                </div>
+            </a> 
+        {% else %}  
+            {% for i in note %} 
+                <a href="{% url 'update' i.id %}"> 
+                    <div class="note">   
+                        <label class="notet">{{ i.title|truncatechars:18 }}</label> 
+                        <label class="noted">{{ i.desc|truncatechars:15 }}</label> 
+                    <!-- {% comment %}<a href="{% url 'delete' i.id %}">Delete</a>{% endcomment %}    -->
+                    </div>
+                </a>   
+            {% endfor %}  
+        {% endif %}
+    </div>  
+      
+    <button class="ncreatebut">
+        <a title="Create a note" href="{% url 'createnotes' %}">++</a>
+    </button>  
+    
+{% endblock %}  

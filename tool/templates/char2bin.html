@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{%block content%}
+
+{% csrf_token %}
+<section class="tconverter">
+< method="post" class="rn">
+    <label class="title">Char to Binary</label>
+    <input type="text" placeholder="Enter char" name="data" value="{{ indata }}">
+    <!-- {% for ij in d %}
+        {%for k in ij %}
+            <p>{{ ij }}</p>
+        {%endfor%}
+    {% endfor %} -->
+    <label class="p">Given Input: {{ indata }}</label>
+    <label class="p">Output: {{ d }}</label>
+    <!-- {% for i in d %}
+    <label class="p">Output:- {{ i }}</label>
+    {%endfor%} -->
+    <label class="p">Combined form: {{ out }}</label> 
+    <div class="tresub">
+        <button type="submit">Submit</button>
+        <button><a href="{% url 'tools' %}">Return</a></button>
+    </div>
+</form>
+</section>
+{%endblock content%}

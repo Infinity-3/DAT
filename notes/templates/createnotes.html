@@ -1,0 +1,35 @@
+{% extends 'main.html' %} 
+
+{% block content %}
+
+{% csrf_token %}
+
+{% if user.is_authenticated %}
+
+{% if h1 is None %} 
+    <label class="chead">Create Notes</label>
+{% else %}
+    <label class="chead">Update Notes</label>
+{% endif %}
+    <!-- {% if msg %}
+        <p>{{msg}}</p>
+    {% endif %} -->
+    {% if h1 is not None %}   
+        <a class="cdel" href="{% url 'delete' data.id %}" title="Delete the note" onclick="return confirm('Are you sure you want to delete this note?');"><i class='fas fa-trash'></i></a>  
+    {% endif %}     
+    <form action="" class="cnform" method="post">          
+        <label class="ctitle">Title:   
+        <input class="cititle" type="text" name="title" placeholder="Title...." value="{{ data.title }}" required></label>  
+        <!-- <textarea class="cititle"name="title" placeholder="Title...." rows="2" cols="50" required>{{ data.title }}</textarea></label>   -->
+        <hr> 
+        <!-- <label class="cdesc">Type your note</label>  --> 
+        <!-- <input class="cidesc" type="text-area" name="desc" placeholder="Type note Description...." value="{{ data.desc }}" required> -->
+        <textarea rows="6" cols="30" class="cidesc" name="desc" placeholder="Type Note Description...." required>{{ data.desc }}</textarea> 
+        <button class="sub" type="submit">Submit</button>     
+    </form>       
+
+{% else %}
+<p>Please <a href="{% url 'login' %}">Login</a></p>
+    
+{% endif %}
+{% endblock %}    

@@ -1,0 +1,32 @@
+{% comment %}{% extends 'main.html' %}{% endcomment %}
+
+{% load static %} 
+
+<section class="nav">
+    <div class="logoimg">
+        <a href="{% url 'main' %}">
+            <img src="{% static 'images/DAT flogo.png' %}" alt="DAT logo">
+        </a>
+    </div>
+    <div class="nlogin"> 
+        <div class="navele a">
+            <a href="{% url 'about' %}"><i class="fa-solid fa-house"></i><label>about</label></a>
+        </div> 
+        <div class="navele n">
+            <a href="{% url 'notes' %}"><i class="fa-solid fa-note-sticky"></i><label>Notes</label></a>
+        </div> 
+        <div class="navele t">
+            <a href="{% url 'tools' %}"><i class="fa-solid fa-gear"></i><label>Tools</label></a>
+        </div>
+        
+        {% if user.is_authenticated %} 
+        <div class="navele l">
+            <!-- {% if user.is_authenticated %} -->
+            <a href="{% url 'logout' %}"><i class="fa fa-power-off"></i><label>Logout</label></a>
+            <!-- {% else %}  
+            <a href="{% url 'login' %}"><i class="fa fa-sign-in"></i><label>Login</label></a>
+            {% endif %}  -->
+        </div>
+        {% endif %}
+    </div>
+</section>    

@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+
+{%block content%}
+
+{% csrf_token %}
+<section class="tconverter">
+<form method="post" class="rn">
+    <label class="title">Octal to Binary</label>
+    <input type="text" placeholder="Enter octal number" value="{{ indata }}" name="data">
+    <label class="p">Given Input: ({{ indata }})<sub>8</sub> </label>
+    {% if msg %}
+    <label class="p">Output: <label style="color: lightcoral;">{{ msg }}</label></label> 
+    {% else %}
+    <label class="p">Result: <label class="ps">{{ d }} || ({{ d }})<sub>2</sub></label></label>
+    <!-- <label class="p">Result: </label> -->
+    {% endif %}
+    <div class="tresub">
+        <button type="submit">Submit</button>
+        <button><a href="{% url 'tools' %}">Return</a></button>
+    </div>
+</form>
+</section>
+{%endblock content%} 

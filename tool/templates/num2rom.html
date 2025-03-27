@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{%block content%}
+
+{% csrf_token %}
+<section class="tconverter">
+<form action="" method="post" class="rn">
+    <label class="p n">Please enter upto '399999 (C̅C̅C̅X̅C̅I̅X̅CMXCIX)' for correct output</label>
+    <label class="title">Number to Roman</label>
+    <input type="text" placeholder="Enter number" value="{{ indata }}" name="data">
+    <label class="p">Number: {{ indata }}</label>
+    {% if msg %}
+    <label class="p">Output: <label style="color: lightcoral;">{{ msg }}</label></label> 
+    {% else %}
+    <label class="p">Output: {{ d }}</label>
+    {% endif %}
+    <div class="tresub">
+        <button type="submit">Submit</button>
+        <button><a href="{% url 'tools' %}">Return</a></button>
+    </div>
+</form>
+</section>
+{%endblock content%}

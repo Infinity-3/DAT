@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+{% csrf_token %}
+<section class="tconverter">
+    <form action="" method="post" class="rn">
+        <label class="p n">Please enter upto 'C̅C̅C̅X̅C̅I̅X̅CMXCIX (399999)' for correct output</label>
+        <label class="title">Roman number to Number</label>
+        <input type="text" placeholder="Enter roman number" value="{{ indata }}" name="data">
+        <label class="p">Given input: {{ indata }}</label>
+        {% if msg %}
+        <label class="p">Output: <label style="color: lightcoral;">{{ msg }}</label></label> 
+        {% else %}
+        <label class="p">Output: {{ d }}</label>
+        {% endif %} 
+        <div class="tresub">
+            <button type="submit">Solution</button>
+            <button><a href="{% url 'tools' %}">Return</a></button>
+        </div>
+    </form> 
+    <div class="rnote">
+        <!-- <p class="rnote">Note: For value 4000 & more. </p> 
+        <p class="rnote">Enter like: 4000: -IV, 5000: -V, 6000: -VI, 7000: -VII,</p> 
+        <p>8000: -VIII, 9000: -IX, 10000: -X</p> -->
+        <p><strong>Note:</strong> For values <strong>4000 and above</strong>, use the following format:</p>
+        <p>4000 → <strong>'-IV'</strong>, 5000 → <strong>'-V'</strong>, 6000 → <strong>'-VI'</strong>, 7000 → <strong>'-VII'</strong>, 8000 → <strong>'-VIII'</strong>,</p>
+        <p>9000 → <strong>'-IX'</strong>, 10000 → <strong>'-X'</strong>, 20000 → <strong>'-X-X'</strong>, 30000 → <strong>'-X-X-X'</strong>, 40000 → <strong>'-X-L'</strong>,</p>
+        <p>50000 → <strong>'-L'</strong>, 60000 → <strong>'-L-X'</strong>, 70000 → <strong>'-L-X-X'</strong>, 80000 → <strong>'-L-X-X-X'</strong>, </p>   
+        <p>90000 → <strong>'-X-C'</strong>, 100000 → <strong>'-C'</strong></p>   
+    </div> 
+</section>  
+    
+{% endblock %} 

@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <label class="thead">Tools</label> 
+    <label class="tnote">Note: Enter only Natural numbers not decimal</label>
+    <div class="toolscont" id="toolscont">  
+        {% for i in items %} 
+            <a class="tools" href="{% url i.url %}">
+                <div>
+                    <label>{{ i.name1 }}</label>
+                    <label>{{ i.name2 }}</label> 
+                    <label>{{ i.name3 }}</label>
+                </div>
+            </a>  
+        {% endfor %}
+    </div>
+{% endblock %}

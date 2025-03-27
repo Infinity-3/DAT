@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<section class="about">
+    <div class="ac ab1">
+        <p> About DAT – Dev & Alarm Tool</p>
+    </div>
+        <div class="ac ab2">
+            <label>Welcome to <span class="highlight">DAT</span>  your all-in-one tool for developers, students, and everyday users! We designed DAT to help you manage notes, convert values effortlessly.</label>
+            <!-- <label><a href="{% url 'notes' %}"><span class="abinfo">Notes App</span></a> – Write down ideas, reminders, and to-dos without the clutter. Stay organized, stay productive!</label>
+            <label><a href="{% url 'tools' %}"><span class="abinfo">Smart Converters</span></a> – Need to switch from Roman to numerical? Numerical to roman? Handle binary? We’ve packed <strong>{{ size }} converters</strong> into one sleek tool!</label>
+            <label><span class="abinfo">More Coming Soon</span> – We’re constantly building and improving, so expect even more handy tools and remainder in the future!</label> -->
+            <label>I created <strong>DAT (Developer & Alarm Tool)</strong> as a side project for practice. It includes a Notes App and various useful converters to simplify everyday tasks.</label>
+            <label>The goal is to build something useful while learning and improving my skills.</label>
+        </div>  
+
+        <div class="ac ab3">
+            <label class="ab31">DAT, we focus on simplicity, efficiency, and accessibility: 
+            Fast & Lightweight – No unnecessary complexity,  
+            User-Friendly Interface – Easy to navigate and use,  
+            Multi-Device Accessibility – Works on desktop, tablet, and mobile,  
+            Time-Saving – Everything you need in one place.
+            <p>Using DAT is simple:</p> 
+            <label class="ab32"><u>Sign Up/Login</u> – Securely access your notes.</label>
+            <label class="ab32"><u>Use the Features</u> – Take notes, convert values, and more.</label>
+            <label class="ab32"><u>Stay Organized & Productive </u>– Save time and focus on what matters.</label>
+        </label> </div>   
+
+        <div class="ac ab4">
+            <p> The Future of DAT</p>
+            <p>We’re constantly improving <span class="highlight">DAT</span> with new tools, better UI, and more features. Have an idea? Let us know!</p>
+        </div>
+
+        <div class="ac ab5">
+            <p> Get in Touch!</p>
+            <p>Have questions, suggestions, or feedback? We’d love to hear from you!</p>
+            <ul>
+                <li> <strong>Website:</strong> <a href="#">YourWebsite.com</a></li>
+                <li> <strong>Email:</strong> support@yourwebsite.com</li>
+                <li> <strong>Follow Us:</strong> [Social Media Links]</li>
+            </ul>
+        </div>
+
+        <a href="{% url 'main' %}#redir" class="acredir">Try DAT Today & Simplify Your Tasks!</a>
+</section> 
+ 
+{% endblock %}  

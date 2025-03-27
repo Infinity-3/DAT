@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAT(Dev & Alarm Tool)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Bilbo+Swash+Caps&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Doto:wght@100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Indie+Flower&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Moon+Dance&family=Noto+Sans+Mongolian&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'tool/css/main.css' %}"> 
+    <script src="https://kit.fontawesome.com/02064b451d.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    {% include 'nav.html' %} 
+    
+    {% block content %} 
+     
+    <section class="home"> 
+        <label class="hmetitle">DAT</label>
+        <div class="hmecont hc1">
+            <label>Welcome to DAT</label>
+            <!-- <label>Your All-in-One Dev & Alarm Tool!</label> -->
+            <label>Your All-in-One <span> D</span>ev & <span> A</span>larm <span> T</span>ool!</label>
+            <!-- <label>Your All-in-One <pre> D</pre>ev & <pre> A</pre>larm <pre> T</pre>ool!</label> -->
+        </div>
+        <p class="hmep">Ever found yourself juggling between multiple tools just to get simple tasks done? We’ve been there! That’s why  <b class="datw">DAT</b>is here—to make life easier for developers, students, and everyday users.</p>
+        <label class="hmehead">What’s Inside?</label>
+        <div class="hmecont hc2"> 
+            <label><a href="{% url 'notes' %}"><span class="hmeinfo">Notes App</span></a> – Write down ideas, reminders, and to-dos without the clutter. Stay organized, stay productive!</label>
+            <!-- <label><span class="hmeinfo">Smart Converters</span> – Need to switch from Roman to numerical? Convert time zones? Handle unit conversions? We’ve packed <strong>{{ toolsize.size }} converters</strong> into one sleek tool!</label> -->
+            <label><a href="{% url 'tools' %}"><span class="hmeinfo">Smart Converters</span></a> – Need to switch from Roman to numerical? Numerical to roman? Handle binary? We’ve packed <strong>{{ size }} converters</strong> into one sleek tool!</label>
+            <label><span class="hmeinfo">More Coming Soon</span> – We’re constantly building and improving, so expect even more handy tools and remainder in the future!</label>
+        </div> 
+        <label class="hmehead">Why DAT?</label>     
+        <div class="hmecont hc3"> 
+            <label class="hmeinfo">Because it’s fast, simple, and designed with real people in mind. Whether you’re a developer needing quick utilities or just someone looking for a smarter way to handle daily tasks, <b class="datw">DAT</b> has got your back.</label>
+        </div>
+    </section>
+
+    <section class="redir" id="redir">
+        <!-- <label class="redirtitle">Ready to get started?</label> -->
+        <label class="redirtitle">Access DAT to get started</label>
+        <div class="access"> 
+            <div class="redin"><a href="{% url 'notes' %}">NOTES</a> </div>
+            <div class="redit"><a href="{% url 'tools' %}">TOOLS</a> </div>
+        </div> 
+    </section>
+    
+    <section class="tooldetail">
+        <label class="tdltitle">Tools Details</label>
+        <div class="tooldesc"> 
+            {% for i in item %}
+                <div class="tcon">
+                    <img src='{{ i.img }}' alt="img">
+                    <div class="tdes"> 
+                        <label class="dtitle">{{ i.title }}</label>
+                        <label class="dhis">{{ i.history }}</label>
+                        <label class="ddata">{{ i.desc }}</label>
+                    </div>
+                </div>
+            {% endfor %} 
+        </div>
+    </section>
+
+    <!-- <h1><a href="{% url 'main' %}" style="text-decoration: none;color: black;">main</a> page for every tools</h1>
+    <button><a href="{% url 'logout' %}">logout</a></button> --> 
+    
+    {% endblock %}
+
+    {% include 'footer.html' %} 
+
+</body>
+</html>
