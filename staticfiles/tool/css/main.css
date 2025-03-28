@@ -788,6 +788,13 @@
     max-width: 97%;  
     /* height: calc(var(--h)*1.5);   */
 }
+
+.cnform .ctitle{
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  gap: calc(var(--h)/5);
+}
   
 .cnform .ctitle,.cdesc{
     font-family: var(--sub1f);  

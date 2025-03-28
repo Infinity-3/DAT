@@ -105,7 +105,7 @@ def rom2num(request):
                 d += c.get(a[i:i+4])   
                 i += 4
             elif a[i:i+3] in c:
-                d += c.get(a[i:i+3])  
+                d += c.get(a[i:i+3])   
                 i += 3
             elif a[i:i+2] in c:
                 d += c.get(a[i:i+2])  
