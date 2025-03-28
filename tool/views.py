@@ -97,69 +97,8 @@ def rom2num(request):
     inp=''
     msg=''
     if request.method == 'POST':
-    #     num = request.POST.get('num')
-    #     if num.isdigit():
-    #         num = int(num)
-        a=request.POST.get('data').lower().strip()
-        # for i in a:
-        #     d+=c.get(i)
-        # for i in range(len(a)-1):
-        #     if a[i]=='i' and (a[i+1] in 'vx'):
-        #         d-=2
-        #     elif  a[i]=='x' and (a[i+1] in 'lc'):
-        #         d-=20
-        #     elif  a[i]=='c' and (a[i+1] in 'dm'):
-        #         d-=200
-        
-        ''' Not working
-        # if (a[i:i+2] in c) or (a[i:i+3] in c) or (a[i:i+4] in c) or (a[i:i+5] in c) or (a[i:i+6] in c) or (a[i:i+7] in c) or (a[i:i+8] in c): 
-        #         if a[i:i+4] in c:   
-        #             d+=c.get(a[i:i+4])  
-        #             i+=4
-        #         if a[i:i+3] in c:    
-        #             d+=c.get(a[i:i+3])  
-        #             i+=3
-        #         if a[i:i+2] in c:  
-        #             d+=c.get(a[i:i+2])  
-        #             i+=2
-        #         elif a[i:i+1] in c: 
-        #             d+=c.get(a[i:i+1])     
-        #             i+=1  
-        #         # elif a[i] in c: 
-        #         #     d+=c.get(a[i])
-        #             # i+=1   
-        #         else: 
-        #             msg='Invalid input' 
-        #     # except IndexError:
-        #     #     msg='Invalid input'
-        
-        # i=0     
-        # for _ in range(len(a)-1):    
-        #     # try:
-        #         if i>len(a):
-        #             # msg='Invalid input' 
-        #             break
-        #         elif a[i:i+4] in c:  
-        #             d+=c.get(a[i:i+4])   
-        #             i+=4 
-        #         elif a[i:i+3] in c: 
-        #             d+=c.get(a[i:i+3])  
-        #             i+=3 
-        #         elif a[i:i+2] in c: 
-        #             d+=c.get(a[i:i+2])  
-        #             i+=2
-        #         elif a[i:i+1] in c:
-        #             d+=c.get(a[i:i+1])   
-        #             i+=1  
-                # elif a[i] in c: 
-                #     d+=c.get(a[i])
-                #     i+=1  
-                # else:  
-                #     msg='Invalid input'
-            # except IndexError:
-            #     msg='Invalid input'
-            '''
-            
+        a=request.POST.get('data').lower().strip()       
+        inp=a  
         i = 0
         while i < len(a):
             if a[i:i+4] in c:
