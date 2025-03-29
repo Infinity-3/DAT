@@ -1,5 +1,5 @@
 DAT (Dev and Alarm Tool)
-DAT is a web application that provides multiple tools, including a note app and 17 different converters (e.g., Roman to numerical). Built with Django and deployed on Vercel, it offers a seamless user experience.
+DAT is a web application that provides multiple tools, including a note app and 17 different converters (e.g., Roman to numerical and more). Built with Django and deployed on Vercel, it offers a seamless user experience.
 
 Features
  Note-taking functionality  
