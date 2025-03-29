@@ -13,13 +13,13 @@ Prerequisites
 Make sure you have 'Python verasion 3.9 or more', 'pip', and 'Git' installed.
 
 Clone the Repository in a new folder
-```sh
-git clone https://github.com/Infinity-3/DAT.git
+ ```sh
+ git clone https://github.com/Infinity-3/DAT.git
 
 Then create a virtual environent(venv) with this command
 venv name can be anything; better name it related to project
-```sh
-python -m venv venv_name
+ ```sh
+ python -m venv venv_name
 
 Then activate the venv
 venv_name\scripts\activate
