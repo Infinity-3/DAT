@@ -13,8 +13,7 @@ Prerequisites
 Make sure you have 'Python verasion 3.9 or more', 'pip', and 'Git' installed.
 
 Clone the Repository in a new folder
- ```md
- git clone https://github.com/Infinity-3/DAT.git```
+ ```md git clone https://github.com/Infinity-3/DAT.git```
 
 Then create a virtual environent(venv) with this command
 venv name can be anything; better name it related to project
