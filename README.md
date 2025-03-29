@@ -1,4 +1,4 @@
-'DAT (Dev and Alarm Tool)
+DAT (Dev and Alarm Tool)
 DAT is a web application that provides multiple tools, including a note app and 17 different converters (e.g., Roman to numerical). Built with Django and deployed on Vercel, it offers a seamless user experience.
 
 Features
@@ -14,12 +14,12 @@ Make sure you have 'Python verasion 3.9 or more', 'pip', and 'Git' installed.
 
 Clone the Repository in a new folder
  ```sh
- git clone https://github.com/Infinity-3/DAT.git
+ git clone https://github.com/Infinity-3/DAT.git```
 
 Then create a virtual environent(venv) with this command
 venv name can be anything; better name it related to project
  ```sh
- python -m venv venv_name
+ python -m venv venv_name```
 
 Then activate the venv
 venv_name\scripts\activate
