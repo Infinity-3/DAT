@@ -13,27 +13,41 @@ Prerequisites
 Make sure you have 'Python verasion 3.9 or more', 'pip', and 'Git' installed.
 
 Clone the Repository in a new folder
- ```sh git clone https://github.com/Infinity-3/DAT.git```
+ ```sh 
+ git clone https://github.com/Infinity-3/DAT.git
+```
 
 Then create a virtual environent(venv) with this command
 venv name can be anything; better name it related to project
- ```sh python -m venv venv_name```
+ ```sh 
+ python -m venv venv_name
+```
 
 Then activate the venv
-```sh venv_name\scripts\activate'''
+```sh
+venv_name\scripts\activate
+```
 
 Then change directory to the project and open VScode in that directory
-``` sh cd DAT
-code . ```
+```sh
+cd DAT
+code .
+```
 
 And install the required packages to run the project
-```sh pip install -r requirements.txt```
+```sh 
+pip install -r requirements.txt
+```
 
 Start the Django development server by this command
-```sh python manage.py runserver```
+```sh 
+python manage.py runserver
+```
 
 Database Setup & Migrations
  Run the following commands to apply database migrations:
- ```sh python manage.py migrate
- python manage.py createsuperuser  # Create admin user if required```
+ ```sh
+python manage.py migrate
+ python manage.py createsuperuser  # Create admin user if required
+```
 
