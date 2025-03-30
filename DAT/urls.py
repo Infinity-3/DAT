@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 from tool import views
 
 urlpatterns = [
@@ -46,3 +48,5 @@ urlpatterns = [
     path('hexdec',views.hex2dec,name='hexdec'),
     path('hexbin',views.hex2bin,name='hexbin'),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
