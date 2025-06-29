@@ -576,6 +576,12 @@
     /* float: left; */
 } 
 
+.rn .op{
+  display: flex;
+  flex-wrap: wrap; 
+  width: 80%;
+}
+
 .rn button{
     position: relative;
     width: 18%;
