@@ -1130,7 +1130,8 @@
 }
 
 .logoimg{
-    width: 7%; 
+  /* border: 1px solid; */
+    width: 6.5%; 
     position: relative;
     top: 3%;  
     left: 3%;   
@@ -1141,8 +1142,8 @@
     width: 100%;
 }
  
-.logoimg img{  
-    width: 100%;
+.logoimg a img{  
+    width: 60%;
     object-fit: cover;
 } 
 
