@@ -1130,6 +1130,7 @@
 }
 
 .logoimg{
+  /* border: 1px solid; */
     width: 7%; 
     position: relative;
     top: 3%;  
@@ -1141,9 +1142,9 @@
     width: 100%;
 }
  
-.logoimg img{  
-    width: 100%;
-    object-fit: cover;
+.logoimg a img{  
+    width: 50%;
+    /* object-fit: cover; */
 } 
 
 .nlogin{
