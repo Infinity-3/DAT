@@ -1143,8 +1143,8 @@
 }
  
 .logoimg a img{  
-    width: 50%;
-    /* object-fit: cover; */
+    width: 60%;
+    object-fit: cover;
 } 
 
 .nlogin{
