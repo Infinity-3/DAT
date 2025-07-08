@@ -15,12 +15,14 @@ def signup(request):
         pw1=request.POST.get('pw1')
         pw2=request.POST.get('pw2')
         if pw1==pw2:
-            if not User.objects.filter(username=un).exists():
+            if not User.objects.filter(email=em).exists():
                 User.objects.create_user(
                     username=un,
                     email=em,
                     password=pw1)
                 return redirect('login')
+            else:
+                return render(request,'signup.html',{'msg':'User-Email already exist'})
         else:
             return render(request,'signup.html',{'msg':'password does not match!'})
     return render(request,'signup.html')

@@ -577,9 +577,13 @@
 } 
 
 .rn .op{
-  display: flex;
+  display: block;
   flex-wrap: wrap; 
   width: 80%;
+  word-wrap: break-word;       /* ensures words break */
+  overflow-wrap: break-word;   /* for wider browser support */
+  white-space: normal;         /* allow multiple lines */
+  overflow-y: auto;
 }
 
 .rn button{

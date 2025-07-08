@@ -3,7 +3,7 @@ DAT is a web application that provides multiple tools, including a note app and 
 
 Features
  Note-taking functionality  
- 17+ conversion tools (e.g., Roman to Number, Temperature, Currency, etc.)  
+ 17+ conversion tools (e.g., Roman to Number, Number to Roman, etc)  
  User authentication & session management  
  Deployed on Vercel for fast, serverless performance  
 

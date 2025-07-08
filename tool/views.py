@@ -114,12 +114,28 @@ def rom2num(request):
                 d += c.get(a[i:i+1])   
                 i += 1
             else:
-                msg= f"Invalid input: {a[i]}"  
+                msg= f"Invalid input: '{inp}'"  
                 break  # Stop if an invalid character is found
-
-        print(d)
-    
+        if not msg:
+            check=rom2numclarify(str(d)[::-1])
+            if check.lower()!=inp:
+                msg='Invalid input'
+            print(d) 
+        
     return render(request,'rom2num.html',{'d':d,'indata':inp.upper(),'msg':msg})
+
+
+def rom2numclarify(b):
+    f=''
+    n={'1':'i','2':'ii','3':'iii','4':'iv','5':'v','6':'vi','7':'vii','8':'viii','9':'ix','10':'x','20':'xx','30':'xxx','40':'xl','50':'l','60':'lx','70':'lxx','80':'lxxx','90':'xc','100':'c','200':'cc','300':'ccc','400':'cd','500':'d','600':'dc','700':'dcc','800':'dccc','900':'cm','1000':'m','2000':'mm','3000':'mmm','4000':'I̅V̅','5000':'V̅','6000':'V̅I̅','7000':'V̅I̅I̅','8000':'V̅I̅I̅I̅','9000':'I̅X̅','10000':'X̅','20000':'X̅X̅','30000':'X̅X̅X̅','40000':'L̅X̅','50000':'L̅','60000':'L̅X̅','70000':'L̅X̅X̅','80000':'L̅X̅X̅X̅','90000':'X̅C̅','100000':'C̅','200000':'C̅C̅','300000':'C̅C̅C̅'} 
+    e=[str(int(b[i])*(10**i)) for i in range(len(b))]
+    print(e)
+        
+    for j in e[::-1]:
+        if j in n:
+            f+=n.get(j)  
+    print(f,'-f')
+    return f
 
 @csrf_exempt
 def num2rom(request):

@@ -148,7 +148,7 @@ button a:hover {
 }
 
 .logoimg{
-    width: 7%; 
+    width: 6.5%; 
     position: relative;
     top: 3%;  
     left: 3%;   
@@ -160,7 +160,7 @@ button a:hover {
 }
  
 .logoimg img{  
-    width: 100%;
+    width: 60%;
     object-fit: cover;
 } 
 
