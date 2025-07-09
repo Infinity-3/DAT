@@ -90,7 +90,7 @@ DATABASES = {
     }
 }
 # database_url = ("postgresql://dat_0i0l_user:tA3J5QLWxZRu2uq4zMczHGEagMP36xoM@dpg-cvgj6dbtq21c73e4ivq0-a.oregon-postgres.render.com/dat_0i0l")
-DATABASES['default'] = dj_database_url.parse("postgresql://dat_0i0l_user:tA3J5QLWxZRu2uq4zMczHGEagMP36xoM@dpg-cvgj6dbtq21c73e4ivq0-a.oregon-postgres.render.com/dat_0i0l")
+DATABASES['default'] = dj_database_url.parse("postgresql://dat_td9u_user:DNQraigSlFtSUZlmXlJyVHarVgjjmpSv@dpg-d1n8pqjuibrs73e96kk0-a.oregon-postgres.render.com/dat_td9u")
 
  
 # Password validation
